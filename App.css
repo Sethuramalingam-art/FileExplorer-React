@@ -1,0 +1,301 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stepper-wrapper {
+  width: 100%;
+  height: 75px;
+  border: 1px solid;
+}
+
+.progress-track {
+  position: relative;
+  height: 4%;
+  top: 22%;
+}
+
+.progress-line {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: gray;
+  right: 0;
+  left: 0;
+  top: 20%;
+  transition: width 0.25s ease;
+  z-index: -1;
+}
+
+.stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active {
+  background-color: brown;
+  color: aliceblue;
+}
+
+.autoCpmplete-wrapper {
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 20px 10px;
+}
+.search-wrapper {
+  width: 25%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid whitesmoke;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:not(:placeholder-shown) + .closeIcon {
+  display: block;
+}
+
+.listView {
+  width: 25%;
+  border: 1px solid lightgrey;
+  background-color: white;
+  overflow-y: auto;
+  z-index: 1;
+  min-height: 100px;
+}
+
+.closeIcon {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+.checkIcon {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.listItem {
+  padding: 5px 10px;
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+}
+
+.listItem:hover {
+  background-color: aliceblue;
+}
+
+.parent_wrapper {
+  border: 1px solid;
+}
+
+.pagination {
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+.slider {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.slide {
+  position: relative;
+  display: none;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide.active {
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slide span {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.navigation-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dots {
+  width: 30px;
+  height: 30px;
+  background: gray;
+  border-radius: 50%;
+  margin: 0 2px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.dots.active {
+  background: skyblue;
+}
+
+.navigation-next-prev .next-prev {
+  position: absolute;
+  top: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  transform: translateY(-100%);
+  z-index: 10000;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.trafficContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.trafficSignal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+  height: 200px;
+  margin: 10px;
+}
+
+.signalState {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.folder {
+  background-color: green;
+  cursor: pointer;
+}
+
+.file {
+  background-color: gray;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.file-explorer {
+  background-color: red;
+  padding: 10px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.breadcrumb {
+  cursor: pointer;
+  color: blue;
+}
